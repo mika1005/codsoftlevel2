@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Travel Information Hub</title>
+    <link rel="stylesheet" href="levell2.css">
+   
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>Travelworld</h1>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Destinations</a></li>
+                <li><a href="#">Travel Tips</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+            <div class="social-icons">
+                <a href="https://wa.me/" target="_blank" class="social-icon whatsapp"><img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp"></a>
+                <a href="https://www.instagram.com/" target="_blank" class="social-icon instagram"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Instagram_logo_2022.svg/1024px-Instagram_logo_2022.svg.png" alt="Instagram"></a>
+                
+                <button class="btn" onclick="sharePage()">Share</button>
+            </div>
+        </nav>
+    </header>
+    <section id="home" class="explore">
+        <div class="tinfo">
+            
+            <h2>Explore Dream Destination....</h2>
+            <p>Discover the beauty of new places and make memories that last a lifetime.</p>
+            <p>"Travel far , travel wide, and explore the beauty of the world with travelhub.."</p>
+           <a href="#destinshare-btnations" class="btn" >Explore Destinations</a>
+        </div>
+    </section>
+
+    <section id="destinations" class="destinations">
+        <div class="container">
+            <h2>Top Destinations</h2>
+            <div class="cards">
+                <div class="card">
+                    <img src="indiatrav.jpg" alt="INDIA">
+                    <h3>INDIA</h3>
+                    <p>"Discover India's timeless beauty, vibrant culture,and rich heritage, where every journey is an unforgattable adventure.."</p>
+                </div>
+                <div class="card">
+                    <img src="france.jpeg" alt="FRANCE">
+                    <h3>FRANCE</h3>
+                    <p>"Experience the charm of France,where iconic landmarks, world-class cuisine, and captivating history await your discovery.."</p>
+                </div>
+                <div class="card">
+                    <img src="america.jpeg" alt="AMERICA">
+                    <h3>AMERICA</h3>
+                    <p>"Explore the best of America , from buzzing cities to stunning natural wonders and everything in between."</p>
+                </div>
+                <div class="card">
+                    <img src="london.jpeg" alt="LONDON">
+                    <h3>LONDON</h3>
+                    <p>"Discover the magic of London ,with its famous landmarks, rich history, and lively culture."</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Travelworld. All rights reserved.</p>
+    </footer>
+
+    <script>
+        function sharePage() {
+            if (navigator.share) {
+                navigator.share({
+                    title: 'TravelHub',
+                    text: 'Check out this amazing travel website!',
+                    url: window.location.href,
+                }).catch(console.error);
+            } else {
+                alert('Share functionality is not supported on this device.');
+            }
+        }
+    </script>
+</body>
+</html>
